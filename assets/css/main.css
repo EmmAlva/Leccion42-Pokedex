@@ -1,12 +1,18 @@
 *{
 	font-family: 'Flexo', sans-serif;
 }
-
+body{
+	background: #9ADE78;
+}
 h1{
 	color: #ff0000;
 	text-align: center;
 }
-
+.feature{
+	background-image: url("assets/img/notch-collectibles.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 /*Verde : #7aa44a
 Lila: #b685c6
 Celeste : #36a4d3
