@@ -1,12 +1,13 @@
 'use strict';
 
 const PokeItem = (pokemon) => {
-	const item = $('<div class="item"></div>');
-	const img = $('<img src ="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+("00"+pokemon.entry_number).slice(-3)+'.png">');
+	const item = $('<div class="item col s3"></div>');
+	const a = $('<a href="#pokeModal"></a>');
+	const img = $('<img class="responsive-img" src ="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+("00"+pokemon.entry_number).slice(-3)+'.png">');
 	const div = $('<div class="features" ></div>');
-	const pokeball = $('<img src="assets/icon/pokeball_gray.png" alt="pokeballGray">');
+	const pokeball = $('<img class="btn btn-floating pulse" src="assets/icon/pokeball_gray.png" alt="pokeballGray">');
 	const heart = $('<img src="assets/icon/valentines-heart.png" alt="heart">');
-	const cross = $('<img src="assets/icon/data.png" alt="data">');
+	const data = $('<img src="assets/icon/data.png" alt="data">');
 	const name = $('<p>'+pokemon.pokemon_species.name+'<p>');
 
   img.on('click',(e) => {
@@ -19,14 +20,16 @@ const PokeItem = (pokemon) => {
   	else return num;
 	}
   }*/
-  item.append(img);
+  a.append(img);
+  item.append(a);
   item.append(div);
   div.append(pokeball);
   div.append(heart);
-  div.append(cross);
+  div.append(data);
   div.append(name);
 
   return item;
+  console.log(a);
 }
 
 const PokeSearch = () =>{
