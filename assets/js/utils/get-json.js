@@ -1,6 +1,6 @@
 'use strict';
 
-const getJSON = (url, cb) => { //cs: callback
+const getJSON = (url, cb) => { //cb: callback
 	const xhr = new XMLHttpRequest();
 	xhr.addEventListener('load', () => {
 		if(xhr.status !== 200) { // 200: esta disponible
@@ -8,6 +8,7 @@ const getJSON = (url, cb) => { //cs: callback
 		}
 		cb(null, xhr.response);
 	});
+    
 	xhr.open('GET', url);
 	xhr.responseType = 'json';
 	xhr.send();

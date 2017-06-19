@@ -8,7 +8,4 @@ const filterByPoke = (pokes, query) => {
 	});
 }
 
-
-
-
 /*NOTA: revisar el consola cada const-function que se cree*/
